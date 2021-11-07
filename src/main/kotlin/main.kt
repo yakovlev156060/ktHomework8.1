@@ -20,7 +20,7 @@ object WallService {
     //private var comments = emptyArray<Comment>()
     //private var notes = emptyArray<Notes>()
     var comments : ArrayList<Comment> = arrayListOf()
-    var notes :  ArrayList<Notes> = arrayListOf()
+    var notes : ArrayList<Notes> = arrayListOf()
 
     private var notesList = emptyArray<Notes>()
 
@@ -51,7 +51,7 @@ object WallService {
     fun delete(id: Int): Boolean {
         for ((index,note) in notes.withIndex()){
             if(index==id){
-                notes[index].isDelete=true
+                notes.get(index).isDelete=true
                 return true
             }
         }
